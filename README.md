@@ -58,9 +58,10 @@ O servidor estará disponível em `http://localhost:8080`.
 |--------|-----------|
 | `npm run dev` | Inicia o servidor de desenvolvimento |
 | `npm run build` | Gera build de produção em `/dist` |
-| `npm run preview` | Visualiza o build de produção |
+| `npm run preview` | Visualiza o build de produção via Vite |
 | `npm run lint` | Executa verificação de código com ESLint |
-| `npm start` | Inicia o servidor de preview (produção) |
+| `npm start` | Inicia o servidor serve na porta 80 (produção) |
+| `npm run start:local` | Inicia o servidor serve na porta 3000 (local) |
 
 ## Deploy no SquareCloud
 

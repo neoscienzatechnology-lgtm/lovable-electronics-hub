@@ -4,4 +4,4 @@ VERSION=recommended
 DISPLAY_NAME=TechStore E-commerce
 DESCRIPTION=E-commerce otimizado para SquareCloud
 SUBDOMAIN=techstore
-START=npx serve dist -l 80
+START=npm start
