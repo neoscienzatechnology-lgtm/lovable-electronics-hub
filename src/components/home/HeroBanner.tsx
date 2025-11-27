@@ -13,11 +13,10 @@ export const HeroBanner = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16 md:py-24 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
+        <div className="max-w-3xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
@@ -32,12 +31,12 @@ export const HeroBanner = () => {
               <span className="text-foreground">com os Melhores Preços</span>
             </h1>
             
-            <p className="text-lg text-muted-foreground max-w-lg">
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
               Descubra smartphones, notebooks, hardware e muito mais com descontos imperdíveis. 
               Entrega rápida e garantia estendida.
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/produtos">
                 <Button variant="hero" size="xl">
                   Ver Ofertas
@@ -50,57 +49,6 @@ export const HeroBanner = () => {
                 </Button>
               </Link>
             </div>
-          </motion.div>
-
-          {/* Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="relative z-10 animate-float">
-              <img
-                src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800"
-                alt="iPhone 15 Pro"
-                className="w-full max-w-md mx-auto drop-shadow-2xl rounded-3xl"
-              />
-            </div>
-            
-            {/* Floating badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="absolute top-10 -left-4 md:left-0 bg-card border border-border rounded-xl p-4 shadow-card"
-            >
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 rounded-lg gradient-accent flex items-center justify-center">
-                  <span className="text-2xl">📱</span>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">iPhone 15 Pro</p>
-                  <p className="text-xs text-muted-foreground">A partir de R$ 9.499</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="absolute bottom-10 -right-4 md:right-0 bg-card border border-border rounded-xl p-4 shadow-card"
-            >
-              <div className="flex items-center gap-3">
-                <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Até 40% OFF</p>
-                  <p className="text-xs text-muted-foreground">Em produtos selecionados</p>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
 
