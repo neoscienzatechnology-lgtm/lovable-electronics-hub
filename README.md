@@ -89,6 +89,34 @@ O projeto já possui o arquivo `squarecloud.app` configurado para deploy estáti
 
 Se o projeto necessitar de variáveis de ambiente, configure-as no painel do SquareCloud ou crie um arquivo `.env` baseado no `.env.example`.
 
+## Deploy no GitHub Pages (Recomendado)
+
+O projeto está configurado para deploy automático no GitHub Pages.
+
+### 🌐 URL de Acesso
+
+Após o deploy, o site estará disponível em:
+
+**https://neoscienzatechnology-lgtm.github.io/lovable-electronics-hub/**
+
+### Passos para Ativar o Deploy
+
+1. **Acesse as configurações do repositório**: Vá em `Settings` > `Pages`.
+
+2. **Configure a Source**:
+   - Em "Build and deployment", selecione `Source: GitHub Actions`
+
+3. **Dispare o deploy**:
+   - Faça um push para a branch `main`, ou
+   - Vá em `Actions` > `Deploy to GitHub Pages` > `Run workflow`
+
+4. **Aguarde o deploy**: O workflow irá:
+   - Instalar dependências
+   - Buildar o projeto
+   - Fazer deploy no GitHub Pages
+
+5. **Acesse o site**: Após o deploy (cerca de 2-3 minutos), acesse a URL acima.
+
 ## Desenvolvimento
 
 ### Adicionando Componentes shadcn/ui
