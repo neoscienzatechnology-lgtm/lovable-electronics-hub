@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
+# TechStore - E-commerce de Eletrônicos
 
-## Project info
+Loja virtual de eletrônicos com os melhores preços em smartphones, notebooks, hardware, acessórios e muito mais.
 
-**URL**: https://lovable.dev/projects/af6e0444-9e1e-4ffb-9828-0b3bb529bf48
+## Stack Tecnológica
 
-## How can I edit this code?
+- **Framework**: [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/) + [Radix UI](https://www.radix-ui.com/)
+- **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
+- **Roteamento**: [React Router DOM](https://reactrouter.com/)
+- **Estado Global**: [TanStack React Query](https://tanstack.com/query)
+- **Animações**: [Framer Motion](https://www.framer.com/motion/)
 
-There are several ways of editing your application.
+## Estrutura do Projeto
 
-**Use Lovable**
+```
+/src
+  /components      # Componentes reutilizáveis
+    /home          # Componentes da página inicial
+    /layout        # Header, Footer, Layout
+    /products      # Componentes de produtos
+    /ui            # Componentes base shadcn/ui
+  /contexts        # Contextos React (CartContext)
+  /data            # Dados e constantes
+  /hooks           # Hooks customizados
+  /lib             # Utilitários
+  /pages           # Páginas da aplicação
+/public            # Assets estáticos
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/af6e0444-9e1e-4ffb-9828-0b3bb529bf48) and start prompting.
+## Instalação
 
-Changes made via Lovable will be committed automatically to this repo.
+### Pré-requisitos
 
-**Use your preferred IDE**
+- Node.js 18+ 
+- npm 9+
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Passos
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Clone o repositório
+git clone <URL_DO_REPOSITÓRIO>
+cd <NOME_DO_PROJETO>
 
-Follow these steps:
+# Instale as dependências
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O servidor estará disponível em `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts Disponíveis
 
-**Use GitHub Codespaces**
+| Script | Descrição |
+|--------|-----------|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera build de produção em `/dist` |
+| `npm run preview` | Visualiza o build de produção via Vite |
+| `npm run lint` | Executa verificação de código com ESLint |
+| `npm start` | Inicia o servidor serve na porta 80 (produção) |
+| `npm run start:local` | Inicia o servidor serve na porta 3000 (local) |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Deploy no SquareCloud
 
-## What technologies are used for this project?
+### Configuração
 
-This project is built with:
+O projeto já possui o arquivo `squarecloud.app` configurado para deploy estático.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Passos para Deploy
 
-## How can I deploy this project?
+1. **Crie uma conta no SquareCloud**: Acesse [squarecloud.app](https://squarecloud.app/) e faça login.
 
-Simply open [Lovable](https://lovable.dev/projects/af6e0444-9e1e-4ffb-9828-0b3bb529bf48) and click on Share -> Publish.
+2. **Prepare o projeto**: Certifique-se de que o build funciona localmente:
+   ```bash
+   npm run build
+   ```
 
-## Can I connect a custom domain to my Lovable project?
+3. **Faça upload do projeto**:
+   - Crie um arquivo `.zip` contendo todos os arquivos do projeto (exceto `node_modules` e `dist`)
+   - No painel do SquareCloud, faça upload do arquivo `.zip`
+   - O SquareCloud executará automaticamente `npm install && npm run build`
 
-Yes, you can!
+4. **Aguarde o deploy**: O SquareCloud irá construir e servir os arquivos da pasta `./dist`.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Variáveis de Ambiente
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Se o projeto necessitar de variáveis de ambiente, configure-as no painel do SquareCloud ou crie um arquivo `.env` baseado no `.env.example`.
+
+## Desenvolvimento
+
+### Adicionando Componentes shadcn/ui
+
+```bash
+npx shadcn@latest add <nome-do-componente>
+```
+
+### Estrutura de Componentes
+
+- Componentes de UI base ficam em `/src/components/ui/`
+- Componentes de negócio ficam em suas respectivas pastas por feature
+
+## Licença
+
+Este projeto é privado e de uso restrito.
